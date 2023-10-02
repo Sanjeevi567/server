@@ -1,0 +1,17 @@
+These commands should be run inside the project directory, i.e., in the same directory as this text.
+The order of calling matters, so don't execute them in an arbitrary order.
+
+The container name passed to `--name` must be unique; otherwise, Docker won't run.
+Put these inside a script like rust Command.
+
+DATABASE_URL=postgres://username:password@localhost/data
+
+docker run --name postgres_database --env-file ./back-end/.env postgres:12-alpine
+
+docker run --name redis_database --env-file ./back-end/.env bitnami/redis 
+
+docker build .
+
+
+docker build .
+
